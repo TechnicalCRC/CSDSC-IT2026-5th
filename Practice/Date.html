@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Date</h1>
+  <div id="date-info"></div>
+  <div id="date-info1"></div>
+  <h1>setTimeout == Sleep</h1>
+  <div id="sett"></div>
+  <script>
+
+   setTimeout(setText,1000);
+
+    function setText(){
+      sett.innerHTML = "Welcome Here, Good Morning";
+    }
+  </script>
+  
+  <script>
+    let date = new Date();
+    document.querySelector('#date-info').innerHTML = date.toString();  
+    document.querySelector('#date-info1').innerHTML = date.toTimeString();  
+    console.log(date.getDate());
+    console.log(date.getDay());
+    console.log(date.getMonth());
+    console.log(date.getFullYear());
+  </script>
+
+  <h1>setInterval - repeat after some time</h1>
+  <div id="seti"></div>
+<script>
+let setd = () =>{
+  d = new Date();
+  document.getElementById("seti").innerHTML = d.getHours() + " - " + d.getMinutes() + " - " + d.getSeconds() + " - " + d.getMilliseconds();
+}
+
+setInterval(() =>{
+  d = new Date();
+  document.getElementById("seti").innerHTML = d.getHours() + " - " + d.getMinutes() + " - " + d.getSeconds() + " - " + d.getMilliseconds();
+},1000);
+
+</script>
+</body>
+</html>

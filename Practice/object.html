@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Objects</h1>
+  <div id="empdetail">
+
+  </div>
+  <script>
+    let emp = [
+    {
+      id:101,
+      name :'vaibhav',
+      salary:23000
+    },{
+      id:102,
+      name :'seema',
+      salary:33000
+    },{
+      id:103,
+      name :'vinay',
+      salary:21000
+    },{
+      id:104,
+      name :'ravi',
+      salary:2000
+    },{
+      id:105,
+      name :'kavi',
+      salary:43000
+    }
+  ]
+
+  let detail = emp.map(data=>{
+    return `<p><b>Id - </b>  ${data.id} &nbsp;&nbsp;<b>Name - </b>&nbsp; ${data.name} &nbsp;&nbsp;<b>Salary -</b> ${data.salary}</b></p>`;
+  })
+  detail.forEach(item=>{
+    document.querySelector('#empdetail').innerHTML += item;
+  })
+  
+  </script>
+</body>
+</html>

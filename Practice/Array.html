@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <h1>Fruit List</h1>
+  <div id="fruit-list">
+  </div>
+  <div id="even">
+  </div>
+  <div id="odd">
+  </div>
+  <script>
+    fruits = ['Banana', 'Apple', 'Mango', 'Pineapple', 'Watermalon', 'Peach'];
+    result = ``;
+    count = 1;
+    
+    result =  fruits.map((fruit) => {
+      return `${count++}. ${fruit}`;
+    });
+    document.getElementById('fruit-list').innerHTML = result;
+
+    let numbers = [12,45,32,11,76,35,55,22];
+
+    let e = numbers.filter(num=> num%2==0);
+    let o = numbers.filter(num=> num%2!=0);
+    even.innerHTML=e;
+    odd.innerHTML=o;
+
+
+  </script>
+</body>
+
+</html>

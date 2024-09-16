@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Destructuring</h1>
+  <h2>Array</h2>
+
+  <div id="res"></div>
+  <script>
+    let cars = ['BMW','Nissan','Porsche','Farrai','Maruti','Tata','Toyota','VW'];
+
+    let [car3, , car2 ,car1] = cars;
+   res.innerHTML = car2;
+
+</script>
+
+<h2>Object</h2>
+
+<div id="obres"></div>
+<div id="obres1"></div>
+<script>
+  let student ={
+    rollno : 201,
+    name:'Amit',
+    Marks:230,
+    batch:'IT'
+  };
+
+  let {marks} = student;
+  let {name} = student;
+  obres.innerHTML = marks;
+  obres1.innerHTML = name;
+</script>
+</body>
+</html>

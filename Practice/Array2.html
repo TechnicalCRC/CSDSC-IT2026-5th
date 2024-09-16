@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let arr1 = [1, 2, 3, 4];
+    console.log(arr1)
+   arr1[6] = 9;
+   console.log(arr1)
+console.log(arr1.length);
+
+// reduce - multi input 1 output
+
+let arr = [1,2,3,4,5];
+
+console.log(arr);
+
+function sum(pre, cur){
+  console.log("object");
+  return pre + cur;
+}
+
+let add =  arr.reduce(sum,100);
+console.log(add);
+
+let arr2 = [1,2,3,4,5];
+let vashu = arr2.reduce((pre,cur,index,array)=>{
+array[index] = array[index] + 2;
+return array;
+},0);
+
+console.log(vashu);
+
+
+</script>
+</body>
+
+</html>
