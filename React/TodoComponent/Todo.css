@@ -1,0 +1,18 @@
+input, button{
+  width:100%;
+}
+
+.my-row{
+  margin-bottom:10px;
+}
+
+.my-todo-text{
+  text-align: left;
+}
+
+.my-heading{
+  font-weight:900;
+  margin: 10px;
+  margin-bottom: 20px;
+  font-family: romo, 'Times New Roman', Times, serif;
+}
