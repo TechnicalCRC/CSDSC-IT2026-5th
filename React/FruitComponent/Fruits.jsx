@@ -7,19 +7,40 @@ export default function Fruits() {
   // object contain state and behavior
   let [list, setList] = useState(["Berry", "Orange"]);
 
+  let [newData, setNewData] = useState();
+
   let handleOnChange = () => {
-    if (event.key == "Enter") {
-      let newFruit = event.target.value;
-      newFruit = [...list,newFruit];
-      setList(newFruit)
-      console.log(newFruit);
-    }
+    setNewData(event.target.value);
+    // if (event.key == "Enter") {
+    //   let newFruit = event.target.value;
+    //   newFruit = [...list,newFruit];
+    //   setList(newFruit)
+    //   console.log(newFruit);
+    // }
+  };
+
+  let handleOnClick = () => {
+    let newFruit = [...list, newData];
+    setList(newFruit);
   };
 
   return (
     <>
       <h1>Fruit List</h1>
-      <input type="text" className="w-50 m-2 mx-5" onKeyDown={handleOnChange} />
+      <input
+        type="text"
+        className="w-50 m-2 mx-5"
+        onChange={handleOnChange}
+        value={newData}
+      />
+
+      <button
+        className="w-25 btn btn-success fw-bold"
+        style={{}}
+        onClick={handleOnClick}
+      >
+        Add Fruit to List
+      </button>
 
       <ol className="list-group">
         {list.map((item) => (
